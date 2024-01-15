@@ -1,4 +1,3 @@
-FROM amazoncorretto:17-alpine
-COPY target/*.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM tomcat:latest
+COPY target/dulcemordidaService-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
 EXPOSE 8080
